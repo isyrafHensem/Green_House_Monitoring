@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "68638664524",
+    "project_id": "fire-auth-9044e",
+    "storage_bucket": "fire-auth-9044e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68638664524:android:07460189f55cf5a4c851e9",
+        "android_client_info": {
+          "package_name": "com.example.assessment_mobile_app_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9zDXJqHeiQlI2UwGuOD7GHOc31DlNbeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
