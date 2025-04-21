@@ -17,97 +17,117 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF00FFE0),
+      backgroundColor: const Color(0xFFDCEEDB), // Slightly darker green background
       appBar: AppBar(
-        title: const Text('Sign Up Page'),
+        title: const Text(
+          'Sign Up',
+          style: TextStyle(
+            color: Colors.white, // White text for contrast
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: const Color(0xFF4CAF50), // Vibrant green for AppBar
+        iconTheme: const IconThemeData(
+          color: Colors.white, // White back arrow
+        ),
       ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              // App Title
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(16.0),
                 child: Text(
-                  'Sign Up to the Greenhouse Monitoring App',
+                  'Create Your Account',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: Color(0xFF2E7D32), // Dark green for title
                   ),
                 ),
               ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.0),
+                child: Text(
+                  'Sign up to monitor and control your greenhouse efficiently.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF4CAF50), // Vibrant green for subtitle
+                  ),
+                ),
+              ),
+              const SizedBox(height: 30),
+              // Email Input Field
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Username',
-                      filled: true,
-                      fillColor: Colors.white.withOpacity(0.8),
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: TextField(
+                  controller: emailController,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white.withOpacity(0.9),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                      borderSide: BorderSide.none,
                     ),
+                    labelText: 'Email Address',
+                    labelStyle: const TextStyle(color: Colors.grey),
+                    prefixIcon: const Icon(Icons.email, color: Color(0xFF4CAF50)),
                   ),
                 ),
               ),
+              const SizedBox(height: 16),
+              // Password Input Field
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  child: TextField(
-                    controller: emailController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Email',
-                      filled: true,
-                      fillColor: Colors.white.withOpacity(0.8),
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: TextField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white.withOpacity(0.9),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                      borderSide: BorderSide.none,
                     ),
+                    labelText: 'Password',
+                    labelStyle: const TextStyle(color: Colors.grey),
+                    prefixIcon: const Icon(Icons.lock, color: Color(0xFF4CAF50)),
                   ),
                 ),
               ),
+              const SizedBox(height: 16),
+              // Confirm Password Input Field
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  child: TextField(
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Password',
-                      filled: true,
-                      fillColor: Colors.white.withOpacity(0.8),
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: TextField(
+                  controller: confirmPasswordController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white.withOpacity(0.9),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                      borderSide: BorderSide.none,
                     ),
-                    obscureText: true,
+                    labelText: 'Confirm Password',
+                    labelStyle: const TextStyle(color: Colors.grey),
+                    prefixIcon: const Icon(Icons.lock_outline, color: Color(0xFF4CAF50)),
                   ),
                 ),
               ),
+              const SizedBox(height: 30),
+              // Sign Up Button
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  child: TextField(
-                    controller: confirmPasswordController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Confirm Password',
-                      filled: true,
-                      fillColor: Colors.white.withOpacity(0.8),
-                    ),
-                    obscureText: true,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.all(4.0),
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
                 child: ElevatedButton(
                   onPressed: () async {
                     if (passwordController.text != confirmPasswordController.text) {
-                      final snackBar = SnackBar(
+                      const snackBar = SnackBar(
                         content: Text('Passwords do not match'),
                         backgroundColor: Colors.red,
                       );
@@ -134,11 +154,49 @@ class _SignUpPageState extends State<SignUpPage> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green,
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                    textStyle: TextStyle(fontSize: 20),
+                    backgroundColor: const Color(0xFF4CAF50), // Vibrant green for button
+                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                    ),
+                    elevation: 10,
                   ),
-                  child: const Text('Sign Up'),
+                  child: const Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              // Redirect to Login
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Text(
+                  "Already have an account? Login",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF4CAF50),
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 30),
+              // Footer
+              const Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  '© 2025 Greenhouse Monitoring App',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Color(0xFF2E7D32), // Dark green footer text
+                  ),
                 ),
               ),
             ],

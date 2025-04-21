@@ -1,5 +1,7 @@
 import 'package:assessment_mobile_app_project/firebase_options.dart';
+import 'package:assessment_mobile_app_project/help.dart';
 import 'package:assessment_mobile_app_project/home.dart';
+import 'package:assessment_mobile_app_project/iot_controlling.dart';
 import 'package:assessment_mobile_app_project/iot_monitoring.dart';
 import 'package:assessment_mobile_app_project/landing.dart';
 import 'package:assessment_mobile_app_project/login.dart';
@@ -40,6 +42,8 @@ class MyApp extends StatelessWidget {
         '/IotMonitoringDataPage': (context) => const IotMonitoringDataPage(),
         '/AboutMePage': (context) => const AboutMePage(),
         '/LandingPage': (context) => const LandingPage(),
+        '/IotControllingPage': (context) => const IotControllingPage(),
+        '/help': (context) => const HelpAndSupportPage(),
       },
     );
   }

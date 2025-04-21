@@ -41,46 +41,52 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBK1k3Moc_Y8Rgl-kjUTFKtycv1rOvKM1c',
-    appId: '1:68638664524:web:54c226e302e3bd62c851e9',
-    messagingSenderId: '68638664524',
-    projectId: 'fire-auth-9044e',
-    authDomain: 'fire-auth-9044e.firebaseapp.com',
-    storageBucket: 'fire-auth-9044e.firebasestorage.app',
+    apiKey: 'AIzaSyBvWdjl_GfouQC0-8pbOPw9k82QLFilXbE',
+    appId: '1:792346799514:web:5c1a7bdb41acb050911e23',
+    messagingSenderId: '792346799514',
+    projectId: 'project-nodered-53287',
+    authDomain: 'project-nodered-53287.firebaseapp.com',
+    databaseURL: 'https://project-nodered-53287-default-rtdb.firebaseio.com',
+    storageBucket: 'project-nodered-53287.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA9zDXJqHeiQlI2UwGuOD7GHOc31DlNbeE',
-    appId: '1:68638664524:android:07460189f55cf5a4c851e9',
-    messagingSenderId: '68638664524',
-    projectId: 'fire-auth-9044e',
-    storageBucket: 'fire-auth-9044e.firebasestorage.app',
+    apiKey: 'AIzaSyBHMvSSJ3ewEbJX_1Zt4QeWgnNeThaoUgM',
+    appId: '1:792346799514:android:796e957a22f3d04d911e23',
+    messagingSenderId: '792346799514',
+    projectId: 'project-nodered-53287',
+    databaseURL: 'https://project-nodered-53287-default-rtdb.firebaseio.com',
+    storageBucket: 'project-nodered-53287.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAC9HsnIBxgp8XMkzHo9HXAQ69pp1mT3q0',
-    appId: '1:68638664524:ios:d5da7f468849bcbcc851e9',
-    messagingSenderId: '68638664524',
-    projectId: 'fire-auth-9044e',
-    storageBucket: 'fire-auth-9044e.firebasestorage.app',
+    apiKey: 'AIzaSyCHsnSDmSCAlhYn0nHu4CrEo_x0GtSNCh8',
+    appId: '1:792346799514:ios:542435052318e109911e23',
+    messagingSenderId: '792346799514',
+    projectId: 'project-nodered-53287',
+    databaseURL: 'https://project-nodered-53287-default-rtdb.firebaseio.com',
+    storageBucket: 'project-nodered-53287.firebasestorage.app',
     iosBundleId: 'com.example.assessmentMobileAppProject',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAC9HsnIBxgp8XMkzHo9HXAQ69pp1mT3q0',
-    appId: '1:68638664524:ios:d5da7f468849bcbcc851e9',
-    messagingSenderId: '68638664524',
-    projectId: 'fire-auth-9044e',
-    storageBucket: 'fire-auth-9044e.firebasestorage.app',
+    apiKey: 'AIzaSyCHsnSDmSCAlhYn0nHu4CrEo_x0GtSNCh8',
+    appId: '1:792346799514:ios:542435052318e109911e23',
+    messagingSenderId: '792346799514',
+    projectId: 'project-nodered-53287',
+    databaseURL: 'https://project-nodered-53287-default-rtdb.firebaseio.com',
+    storageBucket: 'project-nodered-53287.firebasestorage.app',
     iosBundleId: 'com.example.assessmentMobileAppProject',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBK1k3Moc_Y8Rgl-kjUTFKtycv1rOvKM1c',
-    appId: '1:68638664524:web:6b640d3490908470c851e9',
-    messagingSenderId: '68638664524',
-    projectId: 'fire-auth-9044e',
-    authDomain: 'fire-auth-9044e.firebaseapp.com',
-    storageBucket: 'fire-auth-9044e.firebasestorage.app',
+    apiKey: 'AIzaSyBvWdjl_GfouQC0-8pbOPw9k82QLFilXbE',
+    appId: '1:792346799514:web:c84b29ea71265787911e23',
+    messagingSenderId: '792346799514',
+    projectId: 'project-nodered-53287',
+    authDomain: 'project-nodered-53287.firebaseapp.com',
+    databaseURL: 'https://project-nodered-53287-default-rtdb.firebaseio.com',
+    storageBucket: 'project-nodered-53287.firebasestorage.app',
   );
+
 }
